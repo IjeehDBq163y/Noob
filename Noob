@@ -29,7 +29,9 @@ end)
 
 local function clickBalloonAndApple(spamCount)
     local apple = Workspace:FindFirstChild("BillboardApple")
-    local appleClick = apple and apple:FindFirstChild("Board") and apple.Board:FindFirstChildOfClass("ClickDetector")
+    local apple = Workspace:FindFirstChild("BillboardApple")
+    local appleClick = apple :FindFirstChild("Board") and balloon.Board:FindFirstChildOfClass("ClickDetector")
+    local appleClick = apple :FindFirstChild("Board") and apple.Board:FindFirstChildOfClass("ClickDetector")
     if appleClick then
         task.spawn(function()
             for i=1, (spamCount or 25000) do
