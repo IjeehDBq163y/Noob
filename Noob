@@ -26,13 +26,14 @@ pcall(function()
         Duration = 3
     })
 end)
+
 local function clickBalloonAndApple(spamCount)
     local apple = Workspace:FindFirstChild("BillboardApple")
     local appleClick = apple and apple:FindFirstChild("Board") and apple.Board:FindFirstChildOfClass("ClickDetector")
-    if balloonClick then
+    if appleClick then
         task.spawn(function()
             for i=1, (spamCount or 25000) do
-                fireclickdetector(balloonClick)
+                fireclickdetector(appleClick)
                 if i % 50 == 0 then task.wait() end
             end
         end)
