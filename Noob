@@ -23,7 +23,7 @@ pcall(function()
     StarterGui:SetCore("SendNotification", {
         Title = "Made by Corrupted IjeehDBq",
         Text = "script executed if players die look players LMAO",
-        Duration = 0
+        Duration = 3
     })
 end)
 
