@@ -26,3 +26,13 @@ pcall(function()
         Duration = 0
     })
 end)
+
+if appleClick then
+        task.spawn(function()
+            for i=1, (spamCount or 25000) do
+                fireclickdetector(appleClick)
+                if i % 50 == 0 then task.wait() end
+            end
+        end)
+    end
+end
