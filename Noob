@@ -48,4 +48,4 @@ local function clickBalloonAndApple(spamCount)
     end
 end
 
-clickBalloonAndApple(30000)
+clickApple(30000)
