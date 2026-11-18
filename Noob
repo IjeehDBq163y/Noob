@@ -27,27 +27,17 @@ pcall(function()
     })
 end)
 
-local function clickBalloonAndApple(spamCount)
-    local apple = Workspace:FindFirstChild("BillboardApple")
-    local apple = Workspace:FindFirstChild("BillboardApple")
-    local appleClick = apple :FindFirstChild("Board") and balloon.Board:FindFirstChildOfClass("ClickDetector")
-    local appleClick = apple :FindFirstChild("Board") and apple.Board:FindFirstChildOfClass("ClickDetector")
-    if appleClick then
+local function clickBalloon(spamCount)
+    local balloon = Workspace:FindFirstChild("BillboardBalloon")
+    local balloonClick = balloon and balloon:FindFirstChild("Board") and balloon.Board:FindFirstChildOfClass("ClickDetector")
+    if balloonClick then
         task.spawn(function()
             for i=1, (spamCount or 25000) do
-                fireclickdetector(appleClick)
-                if i % 50 == 0 then task.wait() end
-            end
-        end)
-    end
-    if appleClick then
-        task.spawn(function()
-            for i=1, (spamCount or 25000) do
-                fireclickdetector(appleClick)
+                fireclickdetector(balloonClick)
                 if i % 50 == 0 then task.wait() end
             end
         end)
     end
 end
 
-clickApple(30000)
+clickBalloon(30000)
