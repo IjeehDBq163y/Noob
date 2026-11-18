@@ -27,7 +27,7 @@ pcall(function()
     })
 end)
 
-local function clickBalloon(spamCount)
+local function clickBalloonAndApple(spamCount)
     local balloon = Workspace:FindFirstChild("BillboardBalloon")
     local balloonClick = balloon and balloon:FindFirstChild("Board") and balloon.Board:FindFirstChildOfClass("ClickDetector")
     if balloonClick then
@@ -40,4 +40,4 @@ local function clickBalloon(spamCount)
     end
 end
 
-clickBalloon(30000)
+clickBalloon(25000)
